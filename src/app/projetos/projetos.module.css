@@ -1,0 +1,48 @@
+.container {
+    height: 100vh; /* ocupa toda a altura da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* alinha verticalmente */
+    align-items: center;     /* alinha horizontalmente */
+    background-color: #f8fafc;
+    padding: 20px;
+    text-align: center;
+  }
+
+
+
+
+.titulo {
+    text-align: center;
+    font-size: 2rem;
+    color: #0ea5e9;
+    margin-bottom: 10px;
+  }
+  
+  .subtitulo {
+    text-align: center;
+    color: #64748b;
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Loader animado */
+  .carregamento {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #e2e8f0;
+    border-top: 6px solid #0ea5e9;
+    border-radius: 50%;
+    animation: girar 1s linear infinite;
+    margin: 0 auto; /* centraliza */
+  }
+  
+  @keyframes girar {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

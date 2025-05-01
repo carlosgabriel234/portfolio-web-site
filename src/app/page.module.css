@@ -1,168 +1,117 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
+.principal {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+  padding: 2rem;
+  flex-wrap: wrap;
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
-}
-
-.main {
+.ladoEsquerdo {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  align-items: flex-start; /* Mantém o conteúdo alinhado à esquerda */
+  flex: 1;
+  
 }
 
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
+.sobreMim {
+  
+  
+  
+  text-align: left;
+  max-width: 600px;
+  margin-bottom: 2rem;
 }
 
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
+.sobreMim h1 {
+  font-size: 40px;
+  color: #393f42; 
+  margin: 0.5rem 0;
 }
 
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
+.sobreMim h3 {
+  font-size: 23px;
+  color: #6f7b81;
+  
+}
+
+.acoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza os itens no eixo horizontal */
+  gap: 10px;
+  margin-left: 98px;
+}
+
+.acoes button {
+  background-color: #ffffff;
+  color: #1f2937;
+  padding: 0.5rem 1rem; /* Menor que antes */
+  font-size: 0.9rem; /* Um pouco menor */
   font-weight: 600;
-}
-
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+  border: 2px solid #1f2937;
+  border-radius: 0.5rem;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.acoes button:hover {
+  background-color: #1f2937;
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.redesSociais {
   display: flex;
-  align-items: center;
+  gap: 1rem; /* Espaço entre os ícones */
   justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
 }
 
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
+
+.redesSociais a:hover {
+  
+  transform: scale(1.05);
 }
 
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 158px;
-}
 
-.footer {
-  grid-row-start: 3;
+.fotoEstudante {
   display: flex;
-  gap: 24px;
-}
-
-.footer a {
-  display: flex;
+  justify-content: center; 
   align-items: center;
-  gap: 8px;
+  max-width: 400px;
+  width: 100%;
 }
 
-.footer img {
-  flex-shrink: 0;
+.fotoEstudante img {
+  width: 100%;
+  height: auto; 
+  max-width: 100%;
+  display: block; 
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
 
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
 
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-}
-
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .main {
+@media (max-width: 768px) {
+  .principal {
+    flex-direction: column;
     align-items: center;
-  }
-
-  .main ol {
     text-align: center;
   }
 
-  .ctas {
+  .acoes {
     flex-direction: column;
+    gap: 10px;
   }
 
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
+  .curiculo button {
+    width: 100%;
   }
 
-  a.secondary {
-    min-width: auto;
-  }
 
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  .fotoEstudante {
+    display: none;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-}
