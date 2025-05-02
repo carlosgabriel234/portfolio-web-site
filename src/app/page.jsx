@@ -27,7 +27,7 @@ export default function Home(){
 
             <div className={styles.curiculo}>
               <a href="/formacoes/Currículo.pdf" target="_blank" rel="noopener noreferrer">
-                <button>Curiculo</button>
+                <button>Currículo</button>
               </a>
             </div> 
 
