@@ -1,0 +1,117 @@
+.principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.ladoEsquerdo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Mantém o conteúdo alinhado à esquerda */
+  flex: 1;
+  
+}
+
+.sobreMim {
+  
+  
+  
+  text-align: left;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.sobreMim h1 {
+  font-size: 40px;
+  color: #393f42; 
+  margin: 0.5rem 0;
+}
+
+.sobreMim h3 {
+  font-size: 23px;
+  color: #6f7b81;
+  
+}
+
+.acoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza os itens no eixo horizontal */
+  gap: 10px;
+  margin-left: 98px;
+}
+
+.acoes button {
+  background-color: #ffffff;
+  color: #1f2937;
+  padding: 0.5rem 1rem; /* Menor que antes */
+  font-size: 0.9rem; /* Um pouco menor */
+  font-weight: 600;
+  border: 2px solid #1f2937;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.acoes button:hover {
+  background-color: #1f2937;
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.redesSociais {
+  display: flex;
+  gap: 1rem; /* Espaço entre os ícones */
+  justify-content: center;
+}
+
+
+.redesSociais a:hover {
+  
+  transform: scale(1.05);
+}
+
+
+.fotoEstudante {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.fotoEstudante img {
+  width: 100%;
+  height: auto; 
+  max-width: 100%;
+  display: block; 
+}
+
+
+
+@media (max-width: 768px) {
+  .principal {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .acoes {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .curiculo button {
+    width: 100%;
+  }
+
+
+  .fotoEstudante {
+    display: none;
+  }
+}
+
